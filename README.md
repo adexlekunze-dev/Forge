@@ -4,7 +4,7 @@ A fully functional frontend prototype demonstrating booking flow optimizations f
 
 ## Project Overview
 
-This prototype was built as part of a Product Manager job application to Forge Holiday Group, demonstrating:
+This prototype demonstrates product management capabilities including:
 - Systematic UX optimization methodology
 - Industry benchmark knowledge
 - Technical prototyping capability for account, loyalty, and booking experiences

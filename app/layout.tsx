@@ -21,6 +21,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="flex flex-col min-h-screen">
+          {/* Prototype Banner */}
+          <div className="bg-yellow-50 border-b border-yellow-200 py-2 px-4 text-center">
+            <p className="text-sm text-yellow-800">
+              <strong>⚠️ Prototype:</strong> This is a demonstration prototype showcasing product management methodology and UX optimization. Not a production application.
+            </p>
+          </div>
           <Navigation />
           <main className="flex-1">
             {children}

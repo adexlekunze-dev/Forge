@@ -19,7 +19,7 @@ import {
 } from 'lucide-react';
 import { mockCurrentBooking } from '@/lib/mockData';
 import { formatDate, formatCardNumber, validateEmail, validatePhone } from '@/lib/utils';
-import { getCountryCodeByPhoneCode, getPhoneCodeByCountryCode } from '@/lib/countries';
+import { getCountryCodeByPhoneCode, getPhoneCodeByCountryCode, getAllCountriesSorted, getCountryByCode } from '@/lib/countries';
 import {
   Tooltip,
   TooltipContent,
@@ -80,8 +80,7 @@ export default function CheckoutPage() {
     const countryCode = getCountryCodeByPhoneCode(phoneCountryCode);
     if (countryCode) {
       // Find country name by code
-      const { getAllCountriesSorted } = require('@/lib/countries');
-      const countryData = getAllCountriesSorted().find((c: any) => c.code === countryCode);
+      const countryData = getAllCountriesSorted().find((c) => c.code === countryCode);
       if (countryData && countryData.name !== country) {
         linkingRef.current.country = true;
         setCountry(countryData.name);
@@ -94,17 +93,17 @@ export default function CheckoutPage() {
       linkingRef.current.country = false;
       return;
     }
-    const { getCountryByCode } = require('@/lib/countries');
-    const countryData = getCountryByCode(
-      country === 'United Kingdom' ? 'GB' :
-      country === 'United States' ? 'US' :
-      country === 'Canada' ? 'CA' :
-      country === 'Australia' ? 'AU' :
-      country === 'New Zealand' ? 'NZ' : ''
-    );
-    if (countryData && countryData.phoneCode !== phoneCountryCode) {
-      linkingRef.current.phoneCode = true;
-      setPhoneCountryCode(countryData.phoneCode);
+    const countryCode = country === 'United Kingdom' ? 'GB' :
+                        country === 'United States' ? 'US' :
+                        country === 'Canada' ? 'CA' :
+                        country === 'Australia' ? 'AU' :
+                        country === 'New Zealand' ? 'NZ' : '';
+    if (countryCode) {
+      const countryData = getCountryByCode(countryCode);
+      if (countryData && countryData.phoneCode !== phoneCountryCode) {
+        linkingRef.current.phoneCode = true;
+        setPhoneCountryCode(countryData.phoneCode);
+      }
     }
   }, [country, phoneCountryCode]);
 

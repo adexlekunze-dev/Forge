@@ -11,7 +11,7 @@ export default function Footer() {
         <p className="text-sm text-gray-500">
           This prototype demonstrates discovery, prioritization, and conversion optimization 
           across account, loyalty & booking journeys—showcasing data-driven, guest-facing 
-          product management capabilities for the Forge Holiday Group PM role.
+          product management capabilities and systematic UX optimization methodology.
         </p>
       </div>
     </footer>
