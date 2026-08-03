@@ -6,7 +6,7 @@ export default function Footer() {
           Adekunle Okubena
         </h3>
         <p className="text-gray-400 mb-4">
-          Product Manager - Ecommerce Optimization and Growth
+          Senior Ecommerce Specialist
         </p>
         <p className="text-sm text-gray-500">
           This prototype demonstrates discovery, prioritization, and conversion optimization 

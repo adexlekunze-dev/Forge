@@ -160,7 +160,7 @@ sykes-booking-optimization/
 ## Author
 
 **Adekunle Okubena**
-- Senior E-commerce CRO Specialist | Product Manager
+- Senior Ecommerce Specialist
 - 8+ years optimizing digital revenue
 - 7-18% documented conversion improvements
 

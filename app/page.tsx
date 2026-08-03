@@ -15,7 +15,7 @@ export default function HomePage() {
             Demonstrating Conversion Optimization Opportunities for Account, Loyalty & Booking Flows
           </p>
           <p className="text-sm sm:text-base lg:text-lg opacity-90">
-            By Adekunle Okubena | Product Manager - Ecommerce Optimization and Growth
+            By Adekunle Okubena | Senior Ecommerce Specialist
           </p>
         </div>
       </header>
